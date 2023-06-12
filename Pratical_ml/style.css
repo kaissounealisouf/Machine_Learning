@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+fieldset{
+   border: 2px solid solid  skyblue;
+   background-color:rgb(185, 185, 182);
+}
+
+span{
+    border: 0.2em solid ;
+}
+
+div{
+    padding: 5px;
+    will-change: contents;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+h6{
+padding: 9px;
+text-transform: capitalize;
+text-align: center;
+-ms-text-justify: inter-ideograph;
+}
