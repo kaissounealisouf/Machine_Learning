@@ -121,10 +121,5 @@ Tensor.dispose()
  });
  console.log(Tnsr.dataSync()); 
 
-
-
-
-
  
-
 

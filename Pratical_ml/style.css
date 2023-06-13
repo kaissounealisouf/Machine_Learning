@@ -26,3 +26,7 @@ text-transform: capitalize;
 text-align: center;
 -ms-text-justify: inter-ideograph;
 }
+img{
+    width: auto;
+    height: 500px;
+}
