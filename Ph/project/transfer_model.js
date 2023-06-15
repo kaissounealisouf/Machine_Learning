@@ -15,8 +15,13 @@ async function app() {
 
         predictionElement.innerText = `Prediction: ${predictions[0].className}`;
         predictionElement.classList.add("prediction-result");
-
-        img.dispose();
+  
+          // Clear the memories
+        const Tidy=tf.tidy(()=>{
+            return img.square().neg();
+          });
+          console.log(Tidy.dataSync());
+        // or img.dispose(); Clear the memories 
         return predictions;
     };
 }
