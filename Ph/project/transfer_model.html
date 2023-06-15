@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratical</title>
-    <!-- import the neccessaries libraries -->
- 
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+    <title>Image Detection Model</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
+
+body {
+	font-size: 1.1rem;
+	font-family: 'Patrick Hand', cursive; 
+	
+	background-color: rgba(229,229,247,0.1);
+background-image:  linear-gradient(rgba(247, 68, 113, 0.1)
+ 2px, transparent 2px), linear-gradient(90deg, rgba(68,76,247, 0.1)
+ 2px, transparent 2px), linear-gradient(rgba(226, 68, 247, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(68,76,247,0.1)
+ 1px, rgba(229,229,247,0.1) 1px);
+background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+        .content {
+            text-align: center;
+        }
+        .prediction {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .webcam {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            display: block;
+        }
+        .capture-button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <!-- TensorFlow libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0/dist/tf.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"></script>
 </head>
-
 <body>
-<!-- Project in transfer model-->
-
-<section>
-    <span><strong>Topic:</strong> Image Detection Model</span> <br>
-    <p>Create a model to detect an image and predict the correct value for that image, or name it.</p></section>
-    <script type="module" src="transfer_model.js"></script>
+    <main>
+        <section class="content">
+            <h1>Image Detection Model</h1>
+            <p>Create a model to detect an image and predict the correct value for that image, or name it.</p>
+            <video class="webcam" autoplay playsinline></video>
+            <button class="capture-button">take picture</button>
+            <div class="prediction">Predict</div>
+        </section>
+    </main>
+    <script src="transfer_model.js"></script>
 </body>
 </html>
